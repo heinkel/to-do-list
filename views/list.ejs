@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center; padding-top: 2em ;  -webkit-text-stroke: 1px black; color: orange">
+        <h1>It's <%= kindOfDay %>!</h1> 
+        <!-- kindOfday could be just day variable as in JS app.js file but to make it more clear I changed the name a  litte -->
+        
+        <!-- adding javascript into HTML file with EJS -- not recommended just if really needed -->
+        <% if (kindOfDay === "Saturday" || kindOfDay === "Sunday" ){ %>
+            <p style="color:lightgreen"><%= alertMessage %></p>
+        <% }else { %>
+            <p style="color:red"><%= alertMessage %></p>
+            <%}%>
+    </div>     
+</body>
+</html>
+

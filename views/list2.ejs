@@ -1,0 +1,20 @@
+<%- include("header") %> 
+    <div class="box" id="heading">
+        <h1> <%= listTitle %></h1>
+    </div>
+    <div class="box">
+
+        <!-- next javascript embedded here allows every element in newListItem array to be listed inside a new <li> element -->
+        <%newListItem.map(el => {%>
+        <div class="item">
+            <input type="checkbox" name="" value="">
+            <p><%=  el %></p>
+        </div>
+        <% }) %>
+
+        <form class="item" action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="list" value= <%=listDestiny %> >+</button>
+        </form>
+    </div>
+    <%- include("footer") %> 
